@@ -3,10 +3,13 @@ use warnings;
 use utf8;
 use open IO => ':utf8', ':std';
 use Text::ANSI::Printf;
-use Getopt::EX::Colormap qw(colorize);
+
+#use Getopt::EX::Colormap qw(colorize);
+use Term::ANSIColor qw(colored);
 sub r {
     local $_ = shift;
-    s/(\S+)/colorize('R', $1)/er;
+#   s/(\S+)/colorize('R', $1)/er;
+    s/(\S+)/colored($1, 'red')/er;
 }
 
 use Test::More;

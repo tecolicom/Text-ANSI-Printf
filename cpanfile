@@ -5,6 +5,6 @@ requires 'Text::ANSI::Fold::Util', '0.01';
 
 on 'test' => sub {
     requires 'Test::More', '0.98';
-    requires 'Getopt::EX';
+#   requires 'Getopt::EX';
 };
 
