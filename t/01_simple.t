@@ -22,10 +22,10 @@ is( Text::ANSI::Printf::sprintf( "%d %5.3f", 12345, 12.345),
 is( Text::ANSI::Printf::sprintf( "%12s",    r("abcde")),  r("       abcde"), 'ASCII %s' );
 
 
-is( Text::ANSI::Printf::sprintf( "%12s",    r"あいうえお"),  r("  あいうえお"), 'wide %s' );
-is( Text::ANSI::Printf::sprintf( "%12s",   r"aあいうえお"),  r(" aあいうえお"), 'wide %s' );
-is( Text::ANSI::Printf::sprintf( "%12s",  r"aaあいうえお"),  r("aaあいうえお"), 'wide %s' );
-is( Text::ANSI::Printf::sprintf( "%12s", r"aaaあいうえお"), r("aaaあいうえお"), 'wide %s' );
+is( Text::ANSI::Printf::sprintf( "%12s",    r("あいうえお")),  r("  あいうえお"), 'wide %s' );
+is( Text::ANSI::Printf::sprintf( "%12s",   r("aあいうえお")),  r(" aあいうえお"), 'wide %s' );
+is( Text::ANSI::Printf::sprintf( "%12s",  r("aaあいうえお")),  r("aaあいうえお"), 'wide %s' );
+is( Text::ANSI::Printf::sprintf( "%12s", r("aaaあいうえお")), r("aaaあいうえお"), 'wide %s' );
 
 is( Text::ANSI::Printf::sprintf("%-12s",    r("あいうえお")), r("あいうえお  ") , 'wide %-s' );
 is( Text::ANSI::Printf::sprintf("%-12s",   r("aあいうえお")), r("aあいうえお ") , 'wide %-s' );
