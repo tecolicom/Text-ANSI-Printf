@@ -1,39 +1,101 @@
 package Text::ANSI::Printf;
-use 5.008001;
-use strict;
+
+use v5.14;
 use warnings;
+use Carp;
 
 our $VERSION = "0.01";
 
+use Exporter 'import';
+our @EXPORT_OK = qw(&ansi_printf &ansi_sprintf);
 
+sub ansi_printf  { &printf (@_) }
+sub ansi_sprintf { &sprintf(@_) }
+
+use Text::VisualPrintf;
+use Text::ANSI::Fold::Util;
+
+sub sprintf {
+    local $Text::VisualPrintf::VISUAL_WIDTH = \&Text::ANSI::Fold::Util::width;
+    Text::VisualPrintf::sprintf(@_);
+}
+
+sub printf {
+    my $fh = ref($_[0]) =~ /^(?:GLOB|IO::)/ ? shift : select;
+    $fh->print(&sprintf(@_));
+}
 
 1;
+
 __END__
 
 =encoding utf-8
 
 =head1 NAME
 
-Text::ANSI::Printf - It's new $module
+Text::ANSI::Printf - printf function for string with ANSI sequence
 
 =head1 SYNOPSIS
 
     use Text::ANSI::Printf;
+    Text::ANSI::Printf::printf FORMAT, LIST
+    Text::ANSI::Printf::sprintf FORMAT, LIST
+
+    use Text::ANSI::Printf qw(ansi_printf ansi_sprintf);
+    ansi_printf FORMAT, LIST
+    ansi_sprintf FORMAT, LIST
+
+=head1 VERSION
+
+Version 0.01
 
 =head1 DESCRIPTION
 
-Text::ANSI::Printf is ...
+Text::ANSI::Printf is a almost-printf-compatible library with a
+capability of handling string with ANSI color sequences, as well as
+multi-byte wide characters.
+
+=head1 FUNCTIONS
+
+=over 4
+
+=item printf FORMAT, LIST
+
+=item sprintf FORMAT, LIST
+
+=item ansi_printf FORMAT, LIST
+
+=item ansi_sprintf FORMAT, LIST
+
+Use just like perl's I<printf> and I<sprintf> functions
+except that I<printf> does not take FILEHANDLE.
+
+=back
+
+=head1 IMPLEMENTATION NOTES
+
+This module uses L<Text::VisualPrintf> and L<Text::ANSI::Fold::Util>
+internally.
+
+=head1 SEE ALSO
+
+L<Text::VisualPrintf>
+
+L<Text::ANSI::Fold::Util>
+
+L<https://github.com/kaz-utashiro/Text-ANSI-Printf>
+
+=head1 AUTHOR
+
+Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright (C) Kazumasa Utashiro.
+Copyright 2020 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-=head1 AUTHOR
-
-Kazumasa Utashiro E<lt>kaz@utashiro.comE<gt>
-
 =cut
 
+#  LocalWords:  printf ansi sprintf
