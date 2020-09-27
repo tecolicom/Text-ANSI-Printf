@@ -43,7 +43,7 @@
       "runtime" : {
          "requires" : {
             "Text::ANSI::Fold::Util" : "0.01",
-            "Text::VisualPrintf" : "3.03",
+            "Text::VisualPrintf" : "3.04",
             "perl" : "v5.14.0"
          }
       },

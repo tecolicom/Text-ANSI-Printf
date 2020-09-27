@@ -19,6 +19,8 @@ is( Text::ANSI::Printf::sprintf( "%d %5.3f", 12345, 12.345),
     'Number %d %f' );
 
 
+is( Text::ANSI::Printf::sprintf( "%12s",            ""),  r("            "), 'ASCII %s (0-column)' );
+is( Text::ANSI::Printf::sprintf( "%12s",        r("a")),  r("           a"), 'ASCII %s (1-column)' );
 is( Text::ANSI::Printf::sprintf( "%12s",    r("abcde")),  r("       abcde"), 'ASCII %s' );
 
 
