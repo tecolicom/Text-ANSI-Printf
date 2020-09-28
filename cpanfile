@@ -1,6 +1,6 @@
 requires 'perl', '5.014';
 
-requires 'Text::VisualPrintf', '3.04';
+requires 'Text::VisualPrintf', '3.05';
 requires 'Text::ANSI::Fold::Util', '0.01';
 
 on 'test' => sub {

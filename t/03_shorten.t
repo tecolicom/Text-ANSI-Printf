@@ -23,12 +23,8 @@ is( Text::ANSI::Printf::sprintf( "%.9s" , r("あいうえお")), r("あいうえ
 is( Text::ANSI::Printf::sprintf( "%.8s" , r("あいうえお")), r("あいうえ"),   'wide %.8s' );
 is( Text::ANSI::Printf::sprintf( "%.7s" , r("あいうえお")), r("あいう "),    'wide %.7s' );
 is( Text::ANSI::Printf::sprintf( "%.2s" , r("あいうえお")), r("あ"),         'wide %.2s' );
-TODO: {
-local $TODO = "Shorten WIDE char to single column.";
-# Due to the spec of Text::ANSI::Fold::fold().
 is( Text::ANSI::Printf::sprintf( "%.1s" , r("あいうえお")), r(" "),          'wide %.1s' );
-}
-is( Text::ANSI::Printf::sprintf( "%.0s" , r("あいうえお")),  "",             'wide %.0s' );
+is( Text::ANSI::Printf::sprintf( "%.0s" , r("あいうえお")), "",              'wide %.0s' );
 
 is( Text::ANSI::Printf::sprintf( "%-.10s", r("あいうえお")), r("あいうえお"), 'wide %-.10s' );
 is( Text::ANSI::Printf::sprintf( "%-.9s" , r("あいうえお")), r("あいうえ "),  'wide %-.9s' );
