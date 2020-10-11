@@ -4,7 +4,7 @@ use v5.14;
 use warnings;
 use Carp;
 
-our $VERSION = "0.02";
+our $VERSION = "1.01";
 
 use Exporter 'import';
 our @EXPORT_OK = qw(&ansi_printf &ansi_sprintf);
@@ -35,6 +35,10 @@ __END__
 
 Text::ANSI::Printf - printf function for string with ANSI sequence
 
+=head1 VERSION
+
+Version 1.01
+
 =head1 SYNOPSIS
 
     use Text::ANSI::Printf;
@@ -44,10 +48,6 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
     use Text::ANSI::Printf qw(ansi_printf ansi_sprintf);
     ansi_printf FORMAT, LIST
     ansi_sprintf FORMAT, LIST
-
-=head1 VERSION
-
-Version 0.02
 
 =head1 DESCRIPTION
 
@@ -90,6 +90,8 @@ L<https://github.com/kaz-utashiro/Text-ANSI-Printf>
 
 L<App::ansicolumn>,
 L<https://github.com/kaz-utashiro/App-ansicolumn>
+
+L<https://en.wikipedia.org/wiki/ANSI_escape_code>
 
 =head1 AUTHOR
 

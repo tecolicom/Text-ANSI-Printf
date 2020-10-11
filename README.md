@@ -3,6 +3,10 @@
 
 Text::ANSI::Printf - printf function for string with ANSI sequence
 
+# VERSION
+
+Version 1.01
+
 # SYNOPSIS
 
     use Text::ANSI::Printf;
@@ -12,10 +16,6 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
     use Text::ANSI::Printf qw(ansi_printf ansi_sprintf);
     ansi_printf FORMAT, LIST
     ansi_sprintf FORMAT, LIST
-
-# VERSION
-
-Version 0.02
 
 # DESCRIPTION
 
@@ -51,6 +51,8 @@ internally.
 
 [App::ansicolumn](https://metacpan.org/pod/App::ansicolumn),
 [https://github.com/kaz-utashiro/App-ansicolumn](https://github.com/kaz-utashiro/App-ansicolumn)
+
+[https://en.wikipedia.org/wiki/ANSI\_escape\_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 # AUTHOR
 
