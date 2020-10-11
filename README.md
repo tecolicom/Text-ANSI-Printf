@@ -15,7 +15,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 # VERSION
 
-Version 0.01
+Version 0.02
 
 # DESCRIPTION
 
@@ -48,6 +48,9 @@ internally.
 
 [Text::ANSI::Printf](https://metacpan.org/pod/Text::ANSI::Printf),
 [https://github.com/kaz-utashiro/Text-ANSI-Printf](https://github.com/kaz-utashiro/Text-ANSI-Printf)
+
+[App::ansicolumn](https://metacpan.org/pod/App::ansicolumn),
+[https://github.com/kaz-utashiro/App-ansicolumn](https://github.com/kaz-utashiro/App-ansicolumn)
 
 # AUTHOR
 
