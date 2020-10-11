@@ -4,12 +4,9 @@ use utf8;
 use open IO => ':utf8', ':std';
 use Text::ANSI::Printf;
 
-#use Getopt::EX::Colormap qw(colorize);
-use Term::ANSIColor qw(colored);
 sub r {
     local $_ = shift;
-#   s/(\S+)/colorize('R', $1)/er;
-    s/(\S+)/colored($1, 'red')/er;
+    s/(\S+)/\e[31m$1\e[m/r;
 }
 
 use Test::More;

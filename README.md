@@ -40,10 +40,13 @@ internally.
 
 # SEE ALSO
 
-[Text::VisualPrintf](https://metacpan.org/pod/Text::VisualPrintf)
+[Text::VisualPrintf](https://metacpan.org/pod/Text::VisualPrintf),
+[https://github.com/kaz-utashiro/Text-VisualPrintf](https://github.com/kaz-utashiro/Text-VisualPrintf)
 
-[Text::ANSI::Fold::Util](https://metacpan.org/pod/Text::ANSI::Fold::Util)
+[Text::ANSI::Fold::Util](https://metacpan.org/pod/Text::ANSI::Fold::Util),
+[https://github.com/kaz-utashiro/Text-ANSI-Fold-Util](https://github.com/kaz-utashiro/Text-ANSI-Fold-Util)
 
+[Text::ANSI::Printf](https://metacpan.org/pod/Text::ANSI::Printf),
 [https://github.com/kaz-utashiro/Text-ANSI-Printf](https://github.com/kaz-utashiro/Text-ANSI-Printf)
 
 # AUTHOR

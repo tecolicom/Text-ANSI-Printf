@@ -79,11 +79,17 @@ internally.
 
 =head1 SEE ALSO
 
-L<Text::VisualPrintf>
+L<Text::VisualPrintf>,
+L<https://github.com/kaz-utashiro/Text-VisualPrintf>
 
-L<Text::ANSI::Fold::Util>
+L<Text::ANSI::Fold::Util>,
+L<https://github.com/kaz-utashiro/Text-ANSI-Fold-Util>
 
+L<Text::ANSI::Printf>,
 L<https://github.com/kaz-utashiro/Text-ANSI-Printf>
+
+L<App::ansicolumn>,
+L<https://github.com/kaz-utashiro/App-ansicolumn>
 
 =head1 AUTHOR
 
