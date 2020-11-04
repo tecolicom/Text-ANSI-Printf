@@ -2,6 +2,10 @@ Revision history for Perl extension Text-ANSI-Printf
 
 {{$NEXT}}
 
+1.03 2020-11-04T09:30:04Z
+
+    - Set test function explicitly.
+
 1.02 2020-11-04T07:22:33Z
 
     - Support backspaces.

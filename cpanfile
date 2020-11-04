@@ -1,6 +1,6 @@
 requires 'perl', '5.014';
 
-requires 'Text::VisualPrintf', '3.10';
+requires 'Text::VisualPrintf', '3.11';
 requires 'Text::ANSI::Fold', '2.02';
 requires 'Text::ANSI::Fold::Util';
 
