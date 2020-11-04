@@ -4,7 +4,7 @@ use v5.14;
 use warnings;
 use Carp;
 
-our $VERSION = "1.01";
+our $VERSION = "1.02";
 
 use Exporter 'import';
 our @EXPORT_OK = qw(&ansi_printf &ansi_sprintf);
@@ -37,7 +37,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 =head1 VERSION
 
-Version 1.01
+Version 1.02
 
 =head1 SYNOPSIS
 

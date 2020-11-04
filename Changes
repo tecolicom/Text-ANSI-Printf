@@ -2,6 +2,10 @@ Revision history for Perl extension Text-ANSI-Printf
 
 {{$NEXT}}
 
+1.02 2020-11-04T07:22:33Z
+
+    - Support backspaces.
+
 1.01 2020-10-11T07:11:45Z
 
     - CPAN release version.
