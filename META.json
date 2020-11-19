@@ -42,9 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Text::ANSI::Fold" : "2.02",
-            "Text::ANSI::Fold::Util" : "0",
-            "Text::VisualPrintf" : "3.11",
+            "Text::ANSI::Fold::Util" : "0.04",
+            "Text::Conceal" : "0.99",
             "perl" : "v5.14.0"
          }
       },
@@ -66,7 +65,7 @@
          "web" : "https://github.com/kaz-utashiro/Text-ANSI-Printf"
       }
    },
-   "version" : "1.03",
+   "version" : "2.01",
    "x_authority" : "cpan:UTASHIRO",
    "x_contributors" : [
       "Kazumasa Utashiro <kaz@utashiro.com>"
