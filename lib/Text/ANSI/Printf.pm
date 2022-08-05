@@ -103,6 +103,9 @@ L<https://github.com/kaz-utashiro/Text-ANSI-Printf>
 L<App::ansicolumn>,
 L<https://github.com/kaz-utashiro/App-ansicolumn>
 
+L<App::ansiecho>,
+L<https://github.com/kaz-utashiro/App-ansiecho>
+
 L<https://en.wikipedia.org/wiki/ANSI_escape_code>
 
 =head1 AUTHOR
@@ -111,7 +114,7 @@ Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright 2020 Kazumasa Utashiro.
+Copyright 2020-2022 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
