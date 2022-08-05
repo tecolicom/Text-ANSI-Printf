@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/kaz-utashiro/Text-ANSI-Printf.svg?branch=master)](https://travis-ci.com/kaz-utashiro/Text-ANSI-Printf)
+[![Actions Status](https://github.com/kaz-utashiro/Text-ANSI-Printf/workflows/test/badge.svg)](https://github.com/kaz-utashiro/Text-ANSI-Printf/actions) [![MetaCPAN Release](https://badge.fury.io/pl/Text-ANSI-Printf.svg)](https://metacpan.org/release/Text-ANSI-Printf)
 # NAME
 
 Text::ANSI::Printf - printf function for string with ANSI sequence
