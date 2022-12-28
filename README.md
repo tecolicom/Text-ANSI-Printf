@@ -26,6 +26,10 @@ capability of handling:
     - Multi-byte wide characters
     - Backspaces
 
+You can give any string including these data as an argument for
+`printf` and `sprintf` funcitons.  String width is calculated
+based on its visible appearance.
+
 # FUNCTIONS
 
 - printf FORMAT, LIST

@@ -67,6 +67,10 @@ capability of handling:
     - Multi-byte wide characters
     - Backspaces
 
+You can give any string including these data as an argument for
+C<printf> and C<sprintf> funcitons.  Each field width is calculated
+based on its visible appearance.
+
 =head1 FUNCTIONS
 
 =over 4
