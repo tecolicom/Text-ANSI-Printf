@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/kaz-utashiro/Text-ANSI-Printf/workflows/test/badge.svg)](https://github.com/kaz-utashiro/Text-ANSI-Printf/actions) [![MetaCPAN Release](https://badge.fury.io/pl/Text-ANSI-Printf.svg)](https://metacpan.org/release/Text-ANSI-Printf)
+[![Actions Status](https://github.com/tecolicom/Text-ANSI-Printf/workflows/test/badge.svg)](https://github.com/tecolicom/Text-ANSI-Printf/actions) [![MetaCPAN Release](https://badge.fury.io/pl/Text-ANSI-Printf.svg)](https://metacpan.org/release/Text-ANSI-Printf)
 # NAME
 
 Text::ANSI::Printf - printf function for string with ANSI sequence
@@ -27,7 +27,7 @@ capability of handling:
     - Backspaces
 
 You can give any string including these data as an argument for
-`printf` and `sprintf` funcitons.  String width is calculated
+`printf` and `sprintf` funcitons.  Each field width is calculated
 based on its visible appearance.
 
 # FUNCTIONS
@@ -51,16 +51,16 @@ internally.
 [https://github.com/kaz-utashiro/Text-Conceal](https://github.com/kaz-utashiro/Text-Conceal)
 
 [Text::ANSI::Fold::Util](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold%3A%3AUtil),
-[https://github.com/kaz-utashiro/Text-ANSI-Fold-Util](https://github.com/kaz-utashiro/Text-ANSI-Fold-Util)
+[https://github.com/tecolicom/Text-ANSI-Fold-Util](https://github.com/tecolicom/Text-ANSI-Fold-Util)
 
 [Text::ANSI::Printf](https://metacpan.org/pod/Text%3A%3AANSI%3A%3APrintf),
-[https://github.com/kaz-utashiro/Text-ANSI-Printf](https://github.com/kaz-utashiro/Text-ANSI-Printf)
+[https://github.com/tecolicom/Text-ANSI-Printf](https://github.com/tecolicom/Text-ANSI-Printf)
 
 [App::ansicolumn](https://metacpan.org/pod/App%3A%3Aansicolumn),
-[https://github.com/kaz-utashiro/App-ansicolumn](https://github.com/kaz-utashiro/App-ansicolumn)
+[https://github.com/tecolicom/App-ansicolumn](https://github.com/tecolicom/App-ansicolumn)
 
 [App::ansiecho](https://metacpan.org/pod/App%3A%3Aansiecho),
-[https://github.com/kaz-utashiro/App-ansiecho](https://github.com/kaz-utashiro/App-ansiecho)
+[https://github.com/tecolicom/App-ansiecho](https://github.com/tecolicom/App-ansiecho)
 
 [https://en.wikipedia.org/wiki/ANSI\_escape\_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
@@ -70,7 +70,7 @@ Kazumasa Utashiro
 
 # LICENSE
 
-Copyright 2020-2022 Kazumasa Utashiro.
+Copyright 2020-2023 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
