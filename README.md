@@ -5,7 +5,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 # VERSION
 
-Version 2.01
+Version 2.02
 
 # SYNOPSIS
 
