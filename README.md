@@ -30,6 +30,35 @@ You can give any string including these data as an argument for
 `printf` and `sprintf` funcitons.  Each field width is calculated
 based on its visible appearance.
 
+For example,
+
+    printf "| %-5s | %-5s | %-5s |\n", "Red", "Green", "Blue";
+
+this code produces the output like:
+
+    | Red   | Green | Blue  |
+
+However, if the arguments are colored by ANSI sequence,
+
+    printf("| %-5s | %-5s | %-5s |\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
+this code produces undsirable result:
+
+    | Red | Green | Blue |
+
+`ansi_printf` can be used to properly format colored text.
+
+    use Text::ANSI::Printf 'ansi_printf';
+    ansi_printf("| %-5s | %-5s | %-5s |\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
+It does not matter if the result is shorter than the original text.
+Next code produces `[R] [G] [B]` in proper color.
+
+    ansi_printf("[%.1s] [%.1s] [%.1s]\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
 # FUNCTIONS
 
 - printf FORMAT, LIST
@@ -46,6 +75,9 @@ This module uses [Text::Conceal](https://metacpan.org/pod/Text%3A%3AConceal) and
 internally.
 
 # SEE ALSO
+
+[Term::ANSIColor::Concise](https://metacpan.org/pod/Term%3A%3AANSIColor%3A%3AConcise),
+[https://github.com/tecolicom/Term-ANSIColor-Concise](https://github.com/tecolicom/Term-ANSIColor-Concise)
 
 [Text::Conceal](https://metacpan.org/pod/Text%3A%3AConceal),
 [https://github.com/kaz-utashiro/Text-Conceal](https://github.com/kaz-utashiro/Text-Conceal)

@@ -72,6 +72,35 @@ You can give any string including these data as an argument for
 C<printf> and C<sprintf> funcitons.  Each field width is calculated
 based on its visible appearance.
 
+For example,
+
+    printf "| %-5s | %-5s | %-5s |\n", "Red", "Green", "Blue";
+
+this code produces the output like:
+
+    | Red   | Green | Blue  |
+
+However, if the arguments are colored by ANSI sequence,
+
+    printf("| %-5s | %-5s | %-5s |\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
+this code produces undsirable result:
+
+    | Red | Green | Blue |
+
+C<ansi_printf> can be used to properly format colored text.
+
+    use Text::ANSI::Printf 'ansi_printf';
+    ansi_printf("| %-5s | %-5s | %-5s |\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
+It does not matter if the result is shorter than the original text.
+Next code produces C<[R] [G] [B]> in proper color.
+
+    ansi_printf("[%.1s] [%.1s] [%.1s]\n",
+           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+
 =head1 FUNCTIONS
 
 =over 4
@@ -95,6 +124,9 @@ This module uses L<Text::Conceal> and L<Text::ANSI::Fold::Util>
 internally.
 
 =head1 SEE ALSO
+
+L<Term::ANSIColor::Concise>,
+L<https://github.com/tecolicom/Term-ANSIColor-Concise>
 
 L<Text::Conceal>,
 L<https://github.com/kaz-utashiro/Text-Conceal>
