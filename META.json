@@ -43,7 +43,7 @@
       "runtime" : {
          "requires" : {
             "Text::ANSI::Fold::Util" : "1.01",
-            "Text::Conceal" : "1.01",
+            "Text::Conceal" : "1.03",
             "perl" : "v5.14.0"
          }
       },

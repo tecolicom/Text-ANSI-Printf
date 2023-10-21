@@ -18,11 +18,12 @@ use Text::ANSI::Fold::Util qw(ansi_width);
 sub sprintf {
     my($format, @args) = @_;
     my $conceal = Text::Conceal->new(
-	except  => $format,
-	test    => qr/[\e\b\P{ASCII}]/,
-	length  => \&ansi_width,
-	max     => int @args,
-	ordered => 0,
+	except    => $format,
+	test      => qr/[\e\b\P{ASCII}]/,
+	length    => \&ansi_width,
+	max       => int @args,
+	ordered   => 0,
+	duplicate => 1,
 	);
     $conceal->encode(@args) if $conceal;
     my $s = CORE::sprintf $format, @args;
