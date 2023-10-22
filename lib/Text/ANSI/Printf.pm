@@ -88,7 +88,7 @@ However, if the arguments are colored by ANSI sequence,
     printf("| %-5s | %-5s | %-5s |\n",
            "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
 
-this code produces undsirable result:
+this code produces undesirable result:
 
     | Red | Green | Blue |
 
@@ -110,12 +110,16 @@ The original C<printf> function has the ability to specify the
 arguments to be targeted by the position specifier, but by default
 this module assumes that the arguments will appear in the given order,
 so you will not get the expected result. If you wish to use it, set
-the variable C<$REORDER> to 1.
+the package variable C<$REORDER> to 1.
 
-    $Text::ANSI::Printf::REORDER = 1;.
+    $Text::ANSI::Printf::REORDER = 1;
 
 By doing so, the order in which arguments appear can be changed and
 the same argument can be processed even if it appears more than once.
+
+If you want to enable this feature only in specific cases, create a
+wrapper function and declare C<$Text::ANSI::Printf::REORDER> as local
+in it.
 
 This behavior is experimental and may change in the future.
 
