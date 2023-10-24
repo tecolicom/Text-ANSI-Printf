@@ -5,5 +5,6 @@ requires 'Text::ANSI::Fold::Util', '1.01';
 
 on 'test' => sub {
     requires 'Test::More', '0.98';
+    requires 'Command::Runner';
 };
 
