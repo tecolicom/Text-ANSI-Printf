@@ -49,6 +49,8 @@
       },
       "test" : {
          "requires" : {
+            "Command::Runner" : "0",
+            "Term::ANSIColor::Concise" : "0",
             "Test::More" : "0.98"
          }
       }
@@ -65,7 +67,7 @@
          "web" : "https://github.com/tecolicom/Text-ANSI-Printf"
       }
    },
-   "version" : "2.03",
+   "version" : "2.04",
    "x_authority" : "cpan:UTASHIRO",
    "x_contributors" : [
       "Kazumasa Utashiro <kaz@utashiro.com>"

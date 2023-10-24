@@ -1,6 +1,6 @@
 package Text::ANSI::Printf;
 
-our $VERSION = "2.03";
+our $VERSION = "2.04";
 
 use v5.14;
 use warnings;
@@ -50,7 +50,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 =head1 VERSION
 
-Version 2.03
+Version 2.04
 
 =head1 SYNOPSIS
 
@@ -72,7 +72,7 @@ capability of handling:
     - Backspaces
 
 You can give any string including these data as an argument for
-C<printf> and C<sprintf> funcitons.  Each field width is calculated
+C<printf> and C<sprintf> functions.  Each field width is calculated
 based on its visible appearance.
 
 For example,
@@ -135,7 +135,7 @@ This behavior is experimental and may change in the future.
 
 =item ansi_sprintf FORMAT, LIST
 
-Use just like perl's I<printf> and I<sprintf> functions
+Use just like Perl's I<printf> and I<sprintf> functions
 except that I<printf> does not take FILEHANDLE.
 
 =back

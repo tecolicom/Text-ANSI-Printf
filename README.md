@@ -5,7 +5,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 # VERSION
 
-Version 2.03
+Version 2.04
 
 # SYNOPSIS
 
@@ -27,7 +27,7 @@ capability of handling:
     - Backspaces
 
 You can give any string including these data as an argument for
-`printf` and `sprintf` funcitons.  Each field width is calculated
+`printf` and `sprintf` functions.  Each field width is calculated
 based on its visible appearance.
 
 For example,
@@ -85,7 +85,7 @@ This behavior is experimental and may change in the future.
 - ansi\_printf FORMAT, LIST
 - ansi\_sprintf FORMAT, LIST
 
-    Use just like perl's _printf_ and _sprintf_ functions
+    Use just like Perl's _printf_ and _sprintf_ functions
     except that _printf_ does not take FILEHANDLE.
 
 # IMPLEMENTATION NOTES
