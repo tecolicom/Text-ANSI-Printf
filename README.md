@@ -5,7 +5,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 # VERSION
 
-Version 2.04
+Version 2.05
 
 # SYNOPSIS
 
@@ -100,11 +100,12 @@ This behavior is experimental and may change in the future.
 This module uses [Text::Conceal](https://metacpan.org/pod/Text%3A%3AConceal) and [Text::ANSI::Fold::Util](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold%3A%3AUtil)
 internally.
 
-# CLI
+# CLI TOOLS
 
-This package contains the [ansiprintf(1)](http://man.he.net/man1/ansiprintf) command. By using this
-command from the command line, you can check the functionality of
-[App::Printf](https://metacpan.org/pod/App%3A%3APrintf).  See [App::ansiprintf](https://metacpan.org/pod/App%3A%3Aansiprintf).
+This package contains the [ansiprintf(1)](http://man.he.net/man1/ansiprintf) command as a wrapper for
+this module. By using this command from the command line interface,
+you can check the functionality of [Text::ANSI::Printf](https://metacpan.org/pod/Text%3A%3AANSI%3A%3APrintf).  See
+[ansiprintf(1)](http://man.he.net/man1/ansiprintf) or \`perldoc ansiprintf\`.
 
 # SEE ALSO
 

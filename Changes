@@ -2,6 +2,11 @@ Revision history for Perl extension Text-ANSI-Printf
 
 {{$NEXT}}
 
+2.05 2023-10-25T10:50:47Z
+
+    - Simplify warning message of script/ansiprintf.
+    - Improve documents.
+
 2.04 2023-10-24T13:01:32Z
 
     - Include script/ansiprintf command in the distribution

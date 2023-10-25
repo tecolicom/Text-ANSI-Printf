@@ -1,6 +1,6 @@
 package Text::ANSI::Printf;
 
-our $VERSION = "2.04";
+our $VERSION = "2.05";
 
 use v5.14;
 use warnings;
@@ -50,7 +50,7 @@ Text::ANSI::Printf - printf function for string with ANSI sequence
 
 =head1 VERSION
 
-Version 2.04
+Version 2.05
 
 =head1 SYNOPSIS
 
