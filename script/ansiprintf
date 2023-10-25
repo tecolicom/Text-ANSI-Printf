@@ -66,10 +66,10 @@ Asian wide characters are formatted according to the width displayed
 on the screen.  Combining characters in other languages are also
 handled correctly.
 
-=item UNICODE NAME
+=item UNICODE CHARACTERS
 
-You can give Unicode character in format or argument string by its
-name like C<"\N{ALARM CLOCK}">.
+You can give Unicode character in parameter strings by its name
+(C<"\N{ALARM CLOCK}">) or code (C<"\N{U+23F0}">).
 
 =item ARGUMENT REORDERING
 

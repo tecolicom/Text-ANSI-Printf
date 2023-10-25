@@ -4,13 +4,18 @@ our $VERSION = "2.04";
 
 use v5.14;
 use warnings;
-use Data::Dumper;
 
-use utf8;
-use Encode;
-use open IO => 'utf8', ':std';
+our $WARN //= $ENV{ANSIPRINTF_WARNING} // 1;
+$SIG{__WARN__} = sub {
+    my $warning = shift;
+    if ($warning =~ /^(.*) in sprintf at /) {
+	print STDERR "$1\n" if $WARN;
+    } else {
+	print STDERR $warning;
+    }
+};
+
 use Pod::Usage;
-
 use Text::ANSI::Printf 2.03 qw(ansi_printf);
 $Text::ANSI::Printf::REORDER = 1;
 

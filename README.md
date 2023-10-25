@@ -17,6 +17,8 @@ Version 2.04
     ansi_printf FORMAT, LIST
     ansi_sprintf FORMAT, LIST
 
+    $ ansiprintf format args ...
+
 # DESCRIPTION
 
 **Text::ANSI::Printf** is a almost-printf-compatible library with a
@@ -24,6 +26,7 @@ capability of handling:
 
     - ANSI terminal sequences
     - Multi-byte wide characters
+    - Combining characters
     - Backspaces
 
 You can give any string including these data as an argument for
@@ -46,6 +49,10 @@ However, if the arguments are colored by ANSI sequence,
 this code produces undesirable result:
 
     | Red | Green | Blue |
+
+This is still better because it is readable, but if the result is
+shorter than the original string, for example, "%.3s", the result will
+be disastrous.
 
 `ansi_printf` can be used to properly format colored text.
 
@@ -93,7 +100,15 @@ This behavior is experimental and may change in the future.
 This module uses [Text::Conceal](https://metacpan.org/pod/Text%3A%3AConceal) and [Text::ANSI::Fold::Util](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold%3A%3AUtil)
 internally.
 
+# CLI
+
+This package contains the [ansiprintf(1)](http://man.he.net/man1/ansiprintf) command. By using this
+command from the command line, you can check the functionality of
+[App::Printf](https://metacpan.org/pod/App%3A%3APrintf).  See [App::ansiprintf](https://metacpan.org/pod/App%3A%3Aansiprintf).
+
 # SEE ALSO
+
+[App::ansiprintf](https://metacpan.org/pod/App%3A%3Aansiprintf)
 
 [Term::ANSIColor::Concise](https://metacpan.org/pod/Term%3A%3AANSIColor%3A%3AConcise),
 [https://github.com/tecolicom/Term-ANSIColor-Concise](https://github.com/tecolicom/Term-ANSIColor-Concise)

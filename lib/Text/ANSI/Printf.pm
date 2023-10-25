@@ -62,6 +62,8 @@ Version 2.04
     ansi_printf FORMAT, LIST
     ansi_sprintf FORMAT, LIST
 
+    $ ansiprintf format args ...
+
 =head1 DESCRIPTION
 
 B<Text::ANSI::Printf> is a almost-printf-compatible library with a
@@ -69,6 +71,7 @@ capability of handling:
 
     - ANSI terminal sequences
     - Multi-byte wide characters
+    - Combining characters
     - Backspaces
 
 You can give any string including these data as an argument for
@@ -91,6 +94,10 @@ However, if the arguments are colored by ANSI sequence,
 this code produces undesirable result:
 
     | Red | Green | Blue |
+
+This is still better because it is readable, but if the result is
+shorter than the original string, for example, "%.3s", the result will
+be disastrous.
 
 C<ansi_printf> can be used to properly format colored text.
 
@@ -145,7 +152,16 @@ except that I<printf> does not take FILEHANDLE.
 This module uses L<Text::Conceal> and L<Text::ANSI::Fold::Util>
 internally.
 
+=head1 CLI TOOLS
+
+This package contains the L<ansiprintf(1)> command as a wrapper for
+this module. By using this command from the command line interface,
+you can check the functionality of L<Text::ANSI::Printf>.  See
+L<ansiprintf(1)> or `perldoc ansiprintf`.
+
 =head1 SEE ALSO
+
+L<App::ansiprintf>
 
 L<Term::ANSIColor::Concise>,
 L<https://github.com/tecolicom/Term-ANSIColor-Concise>
