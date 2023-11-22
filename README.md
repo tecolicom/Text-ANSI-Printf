@@ -1,7 +1,7 @@
 [![Actions Status](https://github.com/tecolicom/Text-ANSI-Printf/workflows/test/badge.svg)](https://github.com/tecolicom/Text-ANSI-Printf/actions) [![MetaCPAN Release](https://badge.fury.io/pl/Text-ANSI-Printf.svg)](https://metacpan.org/release/Text-ANSI-Printf)
 # NAME
 
-Text::ANSI::Printf - printf function for string with ANSI sequence
+Text::ANSI::Printf - printf function to print string including ANSI sequence
 
 # VERSION
 
@@ -115,7 +115,7 @@ you can check the functionality of [Text::ANSI::Printf](https://metacpan.org/pod
 [https://github.com/tecolicom/Term-ANSIColor-Concise](https://github.com/tecolicom/Term-ANSIColor-Concise)
 
 [Text::Conceal](https://metacpan.org/pod/Text%3A%3AConceal),
-[https://github.com/kaz-utashiro/Text-Conceal](https://github.com/kaz-utashiro/Text-Conceal)
+[https://github.com/tecolicom/Text-Conceal](https://github.com/tecolicom/Text-Conceal)
 
 [Text::ANSI::Fold::Util](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold%3A%3AUtil),
 [https://github.com/tecolicom/Text-ANSI-Fold-Util](https://github.com/tecolicom/Text-ANSI-Fold-Util)

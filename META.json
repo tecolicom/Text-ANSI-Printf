@@ -1,5 +1,5 @@
 {
-   "abstract" : "printf function for string with ANSI sequence",
+   "abstract" : "printf function to print string including ANSI sequence",
    "author" : [
       "Kazumasa Utashiro"
    ],

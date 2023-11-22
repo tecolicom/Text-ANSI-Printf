@@ -15,7 +15,7 @@ sub ansi_sprintf { &sprintf(@_) }
 use Text::Conceal;
 use Text::ANSI::Fold::Util qw(ansi_width);
 
-our $REORDER = 0;
+our $REORDER //= 0;
 
 sub sprintf {
     my($format, @args) = @_;
@@ -26,11 +26,9 @@ sub sprintf {
 	length    => \&ansi_width,
 	ordered   => ! $REORDER,
 	duplicate => !!$REORDER,
-	);
-    $conceal->encode(@args) if $conceal;
-    my $s = CORE::sprintf $format, @args;
-    $conceal->decode($s)    if $conceal;
-    $s;
+    ) || goto &CORE::sprintf;
+    ($conceal->decode(CORE::sprintf($format,
+				    $conceal->encode(@args))))[0];
 }
 
 sub printf {
@@ -46,7 +44,7 @@ __END__
 
 =head1 NAME
 
-Text::ANSI::Printf - printf function for string with ANSI sequence
+Text::ANSI::Printf - printf function to print string including ANSI sequence
 
 =head1 VERSION
 
@@ -167,7 +165,7 @@ L<Term::ANSIColor::Concise>,
 L<https://github.com/tecolicom/Term-ANSIColor-Concise>
 
 L<Text::Conceal>,
-L<https://github.com/kaz-utashiro/Text-Conceal>
+L<https://github.com/tecolicom/Text-Conceal>
 
 L<Text::ANSI::Fold::Util>,
 L<https://github.com/tecolicom/Text-ANSI-Fold-Util>
