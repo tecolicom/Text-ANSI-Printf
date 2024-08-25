@@ -101,13 +101,38 @@ C<ansi_printf> can be used to properly format colored text.
 
     use Text::ANSI::Printf 'ansi_printf';
     ansi_printf("| %-5s | %-5s | %-5s |\n",
-           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+           "\e[31mRed\e[m", "\e[32;3mGreen\e[m", "\e[34;3;4mBlue\e[m");
 
 It does not matter if the result is shorter than the original text.
 Next code produces C<[R] [G] [B]> in proper color.
 
     ansi_printf("[%.1s] [%.1s] [%.1s]\n",
-           "\e[31mRed\e[m", "\e[32mGreen\e[m", "\e[34mBlue\e[m");
+           "\e[31mRed\e[m", "\e[32;3mGreen\e[m", "\e[34;3;4mBlue\e[m");
+
+=head1 RELATED TOOLS
+
+L<Text::ANSI::Printf> only prints strings including ANSI sequences, it
+does not generate ANSI colored text.  To produce colored text, use
+standard L<Term::ANSIColor> or companion module
+L<Term::ANSIColor::Concise>.  Using C<ansi_color> function of
+L<Term::ANSIColor::Concise> module, above example can be written as
+follows.
+
+    use Text::ANSI::Printf 'ansi_printf';
+    use Term::ANSIColor::Concise 'ansi_color';
+
+    ansi_printf("| %-5s | %-5s | %-5s |\n",
+                ansi_color("R", "Red", "GI", "Green", "BIU", "Blue"));
+
+Using the command line interface, C<ansiprintf>, and the companion
+command, C<ansiecho>, the shell command can be executed as follows.
+
+    ansiprintf "| %-5s | %-5s | %-5s |\n" \
+               $(ansiecho -cR Red -cGI Green -cBIU Blue)
+
+In fact, this can be done with the C<ansiecho> command alone.
+
+    ansiecho -f "| %-5s | %-5s | %-5s |" -cR Red -cGI Green -cBIU Blue
 
 =head1 ARGUMENT REORDERING
 
@@ -187,7 +212,7 @@ Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright © 2020-2023 Kazumasa Utashiro.
+Copyright © 2020-2024 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
