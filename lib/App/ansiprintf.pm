@@ -1,6 +1,6 @@
 package App::ansiprintf;
 
-our $VERSION = "2.0601";
+our $VERSION = "2.0602";
 
 use v5.14;
 use warnings;
