@@ -84,7 +84,7 @@ this code produces the output like:
 
 =begin :text
 
-    | Red   | Green | Blue  |
+    | Red      | Green    | Blue     |
 
 =end :text
 
@@ -159,17 +159,17 @@ follows.
 
     use Text::ANSI::Printf 'ansi_printf';
     use Term::ANSIColor::Concise 'ansi_color';
-    ansi_printf("| %-5s | %-5s | %-5s |\n",
-                ansi_color("R", "Red", "GI", "Green", "BIU", "Blue"));
+    ansi_printf("| %-8s | %-8s | %-8s |\n",
+                ansi_color("R" => "Red", "GI" => "Green", "BIU" => "Blue"));
 
 Using the command line interface, C<ansiprintf>, and the companion
 command, C<ansiecho>, the shell command can be executed as follows.
 
-    ansiprintf "| %-5s | %-5s | %-5s |\n" $(ansiecho -cR Red -cGI Green -cBIU Blue)
+    ansiprintf "| %-8s | %-8s | %-8s |\n" $(ansiecho -cR Red -cGI Green -cBIU Blue)
 
 In fact, this can be done with the C<ansiecho> command alone.
 
-    ansiecho -f "| %-5s | %-5s | %-5s |" -cR Red -cGI Green -cBIU Blue
+    ansiecho -f "| %-8s | %-8s | %-8s |" -cR Red -cGI Green -cBIU Blue
 
 =head1 ARGUMENT REORDERING
 
