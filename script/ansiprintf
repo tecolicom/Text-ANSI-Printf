@@ -34,26 +34,43 @@ screen.
 
 For example, next command
 
-    printf '|%-5s|%-5s|%-5s|\n' Red Green Blue
+    printf '| %-8s | %-8s | %-8s |\n' Red Green Blue
 
 will print
 
-    |Red  |Green|Blue |
+=begin :text
+
+    | Red      | Green    | Blue     |
+
+=end :text
+
+=begin html
+
+<p><img width="300" src="https://raw.githubusercontent.com/tecolicom/Text-ANSI-Printf/master/images/plain.png">
+
+=end html
 
 and
 
-    ansiprintf '|%-5s|%-5s|%-5s|\n' \
-        $'\e[31mRed\e[m' $'\e[32mGreen\e[m' $'\e[34mBlue\e[m'
+    COLORS=($'\e[31mRed\e[m' $'\e[32;3mGreen\e[m' $'\e[34;3;4mBlue\e[m')
+    ansiprintf '| %-8s | %-8s | %-5s |\n' ${COLORS[@]}
 
 will produce same result with colored arguments.
 
+=begin html
+
+<p><img width="300" src="https://raw.githubusercontent.com/tecolicom/Text-ANSI-Printf/master/images/good.png">
+
+=end html
+
 You can give colored arguments with L<ansiecho(1)> command:
 
-    ansiprintf '|%-5s|%-5s|%-5s|\n' $(ansiecho -cR Red -cG Green -cB Blue)
+    COLORS=($(ansiecho -cR Red -cGI Green -cBIU Blue))
+    ansiprintf "| %-8s | %-8s | %-8s |\n" ${COLORS[@]}
 
 but this can be done with just L<ansiecho(1)>:
 
-    ansiecho -f '|%-5s|%-5s|%-5s|' -cR Red -cG Green -cB Blue
+    ansiecho -f "| %-8s | %-8s | %-8s |" -cR Red -cGI Green -cBIU Blue
 
 In addition to handling ANSI terminal sequences, L<ansisprintf> has
 the following features.
@@ -97,7 +114,7 @@ Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright © 2023- Kazumasa Utashiro.
+Copyright © 2023-2024 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
