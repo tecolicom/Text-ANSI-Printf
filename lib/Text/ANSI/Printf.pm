@@ -1,6 +1,6 @@
 package Text::ANSI::Printf;
 
-our $VERSION = "2.0602";
+our $VERSION = "2.07";
 
 use v5.14;
 use warnings;
@@ -48,7 +48,7 @@ Text::ANSI::Printf - printf function to print string including ANSI sequence
 
 =head1 VERSION
 
-Version 2.0602
+Version 2.07
 
 =head1 SYNOPSIS
 
@@ -249,7 +249,7 @@ Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright © 2020-2024 Kazumasa Utashiro.
+Copyright © 2020-2025 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

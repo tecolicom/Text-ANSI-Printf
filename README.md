@@ -5,7 +5,7 @@ Text::ANSI::Printf - printf function to print string including ANSI sequence
 
 # VERSION
 
-Version 2.0602
+Version 2.07
 
 # SYNOPSIS
 
@@ -173,7 +173,7 @@ Kazumasa Utashiro
 
 # LICENSE
 
-Copyright © 2020-2024 Kazumasa Utashiro.
+Copyright © 2020-2025 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

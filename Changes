@@ -2,6 +2,10 @@ Revision history for Perl extension Text-ANSI-Printf
 
 {{$NEXT}}
 
+2.07 2025-01-30T02:35:35Z
+
+    - "ansiprintf" warned when printing unicode string
+
 2.0602 2024-08-26T04:09:38Z
 
     - Include images in document.

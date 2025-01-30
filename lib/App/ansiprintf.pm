@@ -4,7 +4,7 @@ use v5.14;
 use warnings;
 use open IO => ':utf8', ':std';
 
-our $VERSION = "2.0602";
+our $VERSION = "2.07";
 
 our $WARN //= $ENV{ANSIPRINTF_WARNING} // 1;
 $SIG{__WARN__} = sub {
